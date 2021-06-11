@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+    version="2.4">
+
+  <description> Servicios de viandas </description>
+  <display-name> Servicios de viandas </display-name>
+
+
+
+  <servlet>
+    <servlet-name>ListadoGeneralViandas</servlet-name>
+    <servlet-class>servlets.ListadoGeneralViandasServlet</servlet-class>
+    <init-param>
+		<param-name>ipServidor</param-name>
+		<param-value>127.0.0.1</param-value>
+	</init-param>
+	<init-param>
+		<param-name>puertoServidor</param-name>
+		<param-value>1099</param-value>
+	</init-param>
+  </servlet>
+ 
+  <servlet-mapping>
+    <servlet-name>ListadoGeneralViandas</servlet-name>
+    <url-pattern>/ListadoGeneralViandas</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>ListadoViandasDescripcion</servlet-name>
+    <servlet-class>servlets.ListadoViandasDescripcionServlet</servlet-class>
+    <init-param>
+		<param-name>ipServidor</param-name>
+		<param-value>127.0.0.1</param-value>
+	</init-param>
+	<init-param>
+		<param-name>puertoServidor</param-name>
+		<param-value>1099</param-value>
+	</init-param>
+  </servlet>
+ 
+  <servlet-mapping>
+    <servlet-name>ListadoViandasDescripcion</servlet-name>
+    <url-pattern>/ListadoViandasDescripcion</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>ViandaDetalle</servlet-name>
+    <servlet-class>servlets.ViandaDetalleServlet</servlet-class>
+    <init-param>
+		<param-name>ipServidor</param-name>
+		<param-value>127.0.0.1</param-value>
+	</init-param>
+	<init-param>
+		<param-name>puertoServidor</param-name>
+		<param-value>1099</param-value>
+	</init-param>
+  </servlet>
+ 
+  <servlet-mapping>
+    <servlet-name>ViandaDetalle</servlet-name>
+    <url-pattern>/ViandaDetalle</url-pattern>
+  </servlet-mapping>
+
+  <welcome-file-list>
+	<welcome-file>/Home.jsp</welcome-file>
+  </welcome-file-list>
+
+</web-app>
+
+
+
+
+
